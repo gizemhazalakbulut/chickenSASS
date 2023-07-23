@@ -1,0 +1,15 @@
+@mixin tablet{
+    @media screen and (max-width:768px){
+        @content; // sonradan içini doldurucaz diye content yazdık 
+    }
+}
+ @mixin mobile{
+   @media screen and (max-width:560px){
+         @content;
+        }
+    }
+
+//buraya yazmıycaz sadece kalıp olarak kullandık içine yazıcaz
+
+
+

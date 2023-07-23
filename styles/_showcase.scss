@@ -1,0 +1,106 @@
+@import 'navbar';
+@import 'constants';
+@import 'colors';
+
+%before-after-case{
+    content: "";
+    position: absolute;
+    height: 100%;
+    width: 0;
+    top: 0;
+    background-color: $orangeRed;
+    transition: .3s;
+    border-radius: $borderRadius;
+
+}
+
+.showcase_container{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    
+
+    &_left{
+        
+        text-align: left;
+        margin-top: 15px;
+        margin-left: 20px;
+        flex-basis: 45%;
+        display: flex;
+        flex-direction: column;
+
+        h1{
+            color: $lime;
+            font-size: 45px;
+            font-weight: bold;
+            margin-top: 20px;
+            margin-bottom: 15px;
+        }
+
+        h2{
+            font-size: 35px;
+            font-weight: bold;
+            margin-top: 0;
+
+        }
+        p{
+            font-size: 25px;
+            font-weight: bold;
+            margin-top: 20px;
+        }
+
+        &_signup{
+            font-size: 1rem;
+            padding: 15px 30px;
+            background-color: $lime;
+            border: none;
+            outline: none;
+            border-radius: $borderRadius;
+            margin-top: 1rem;
+            cursor: pointer;
+            position: relative;
+            transition: .3s;
+            width: 200px;
+
+            a{
+                color: $light;
+                text-decoration: none;
+                font-size: 20px;
+                z-index: 2;
+                position: relative;
+
+            }
+
+            &::after{
+                right: 0;
+                @extend %before-after-case;
+            }
+
+            &::before{
+                left: 0;
+                @extend %before-after-case;
+            }
+
+            &:hover::after{
+                width: 50%;
+            }
+
+            &:hover::before{
+                width: 50%;
+            }
+
+
+        }
+    }
+
+    &_right{
+        flex-basis: 45%;
+    }
+
+
+    @include tablet{
+        flex-direction: column;
+    }
+
+
+}
