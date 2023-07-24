@@ -1,4 +1,4 @@
-<h1>Chicken SASS Project</h1>
+<h1>Chicken SCSS Project</h1>
 
 SCSS ile yazılmış çiftlik web sitesidir.
 
